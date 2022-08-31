@@ -100,6 +100,7 @@ let weather = {
 };
 
 window.onload = (event) => {
+
         let historical = window.localStorage.getItem('SearchHistory');
         let historian = JSON.parse(historical);
         const index = document.querySelector('.index');
@@ -115,6 +116,7 @@ window.onload = (event) => {
             }
             index.innerHTML = generateHTML; 
         }
+
 };
 
 function startIndex(e) {

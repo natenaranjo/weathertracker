@@ -127,6 +127,8 @@ function startIndex(e) {
 }
 
 document.addEventListener('DOMContentLoaded', ()=> {
+    const city = 'Austin';
+    weather.fetchGeoloaction(city);
     document.querySelector(".search-bar").addEventListener('keyup', function(event) {
         event.preventDefault();
         let city = document.querySelector(".search-bar").value;

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Weather Tracker App" />
+        <meta name="author" content="Nate Naranjo" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mother Nature Tracker</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="./css/global.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    </head>
+    <body>
+        <div class="w-screen h-screen flex flex-row justify-center items-center bg-gray-400">
+            
+            <div class="container w-3/4 h-3/4 flex flex-row">
+                <aside class="w-64 h-full bg-slate-600 text-white rounded-xl" aria-label="Sidebar">
+                    <div class="w-full h-16 flex justify-center items-center border-b-4 border-white">
+                        <h1 class="text-2xl font-bold">Weather Tracker</h1>
+                    </div>
+                    <div class="overflow-y-auto py-4 px-4 rounded">
+                        <div class="search flex flex-row justify-between">
+                            <input type="text" class="search-bar rounded-full text-center border-2 border-black text-black" placeholder="Enter city" id="cityName" />
+                        </div>
+                    </div>
+                    <div class="index w-full h-auto py-8 flex flex-col justify-center items-center gap-2 px-8" id="parent">
+                        
+                    </div>
+                    <div class="Clear w-full flex justify-center items-center">
+                        <button class="btn bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded-xl">Clear History</button>
+                    </div>
+                </aside>
+
+                <div class="Dashboard w-[100%] h-auto flex flex-col rounded-xl">
+                    <div class="w-full h-full bg-black bg-opacity-70 rounded-xl text-white">
+                        <div class="weather h-1/2 flex flex-col justify-center items-center">
+                            <h2 class="city text-6xl capitalize">Weather in Denver</h2>
+                            <div class="temp text-3xl">51°F</div>
+                            <div class="uvi text-2xl text-center w-36 h-8 rounded-xl bg-green-300">UVI: 0</div>
+                            <img src="./assets/img/weather icons/sun.png" alt="/" class="icon h-24 w-24 width="5%" />
+                            <div class="description text-3xl capitalize">Cloudy</div>
+                            <div class="humidity text-3xl capitalize">Humidity: 60%</div>
+                            <div class="wind text-3xl capitalize">Wind speed: 3 mph</div>
+                        </div>
+                        <div class="cards px-4 py-8 gap-16 flex flex-row justify-around gap-4">
+
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" defer></script>
+        <script src="./js/app.js" defer></script>
+    </body>
+</html>

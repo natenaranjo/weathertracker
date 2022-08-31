@@ -100,7 +100,8 @@ let weather = {
 };
 
 window.onload = (event) => {
-
+        const city = 'Austin';
+        weather.fetchGeoloaction(city);
         let historical = window.localStorage.getItem('SearchHistory');
         let historian = JSON.parse(historical);
         const index = document.querySelector('.index');
